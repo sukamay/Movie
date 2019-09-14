@@ -1,0 +1,91 @@
+h1{
+    text-align: center;
+}
+
+body{
+    background-color: #eaf6f6;
+    font-family: Garamond, serif;
+    font-size: 12pt;
+    margin: 0 auto;
+}
+
+#show{
+    width: 80%;
+    height: 100px;
+    margin: 0 auto;
+    text-align: center;
+    font: 36pt bold;
+    font-family: monospace;
+    line-height: 100px;
+    border: 2px #8ebebe solid;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.controls{
+    width: 80%;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+}
+.control{
+    display: inline-block;
+    margin: 15px;
+}
+
+.control fieldset{
+    border: none;
+    margin: 2px;
+    padding: 0;
+}
+
+.button{
+    background: white;
+    border: 1px gray solid;
+    width: 70px;
+}
+
+.button:disabled{
+    background: lightgray;
+}
+
+.label{
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+    border-bottom: 1px #8ebebe solid;
+    display: inline-block;
+    padding: 2px;
+}
+
+#text{
+    border: 1px gray solid;
+    background: #ffffff;
+}
+
+#text:disabled{
+    background: lightgray;
+}
+
+.inputbox{
+    width: 82%;
+    margin: 0 auto;
+    border: none;
+}
+
+input:disabled{
+    background: lightgray;
+}
+
+#speed{
+    border: 1px gray solid;
+    border-radius: 0;
+    width: 70px;
+    padding: 2px;
+    padding-right: 13px;
+    background: url("arrow.jpg") no-repeat scroll right center transparent;
+    background-color: white;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}

@@ -1,0 +1,30 @@
+{% extends 'index.html' %}
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <link href="/static/img/flogo.png"
+          type="image/png" rel="shortcut icon"/>
+    <meta charset="utf-8">
+    <meta name="referrer" content="no-referrer">
+    <title>济影</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    {#    <script src="js/create.js"></script>#}
+    <script src="/static/js/page.js"></script>
+    <script src="/static/js/search.js"></script>
+{#    <script src="js/index.js"></script>#}
+</head>
+
+<body id="main">
+{% block main %}
+    {% if error_msg %}
+    <p>{{ error_msg }}</p>
+    {% endif %}
+{% endblock main %}
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.nav{
+    background: black;
+    color: whitesmoke;
+    font-size: 18;
+}
+
+.menu{
+    float: left;
+    background: gray;
+}
+
+.content{
+    margin-left: 20%;
+}

@@ -1,0 +1,325 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/calendar.css">
+
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/calendar.js"></script>
+
+
+</head>
+<body>
+<nav>
+    <div class="container">
+        <div class="logo"><img class="img-responsive" src="img/flogo.png" alt="logo"></div>
+        <div class="nav-sec">
+            <ul class="nav-bar">
+                <li><a href="index.html">Day</a></li>
+                <li><a href="#">Week</a></li>
+                <li><a href="calendarMonth.html">Month</a></li>
+                <li><a href="calendar.html">Year</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+<div id="calendar"></div>
+<div class="cal-tooltip" style="display: block; left: 0; top: 0;">
+    <table class="edit">
+        <tr>
+            <th class="name">水岸</th>
+        </tr>
+        <tr class="start-time">
+            <th class="header ">开始时间</th>
+            <th class="content"><span>2019/06/05</span>
+                <div class="hour dropdown">
+                    <span class="dropdown-toggle" data-toggle="dropdown">no<span class="caret"></span></span>
+                    <ul class="dropdown-menu">
+                        <li>10</li>
+                        <li>2</li>
+                        <li>3</li>
+                    </ul>
+                </div>
+                <div class="minute dropdown">
+                    <span class="dropdown-toggle" data-toggle="dropdown">no<span class="caret"></span></span>
+                    <ul class="dropdown-menu">
+                        <li>10</li>
+                        <li>2</li>
+                        <li>3</li>
+                    </ul>
+                </div>
+            </th>
+        </tr>
+        <tr class="end-time">
+            <th class="header">结束时间</th>
+            <th class="content"><span>2019/06/05</span>
+                <div class="hour dropdown">
+                    <span class="dropdown-toggle" data-toggle="dropdown">no<span class="caret"></span></span>
+                    <ul class="dropdown-menu">
+                        <li>10</li>
+                        <li>2</li>
+                        <li>3</li>
+                    </ul>
+                </div>
+                <div class="minute dropdown">
+                    <span class="dropdown-toggle" data-toggle="dropdown">no<span class="caret"></span></span>
+                    <ul class="dropdown-menu">
+                        <li>10</li>
+                        <li>2</li>
+                        <li>3</li>
+                    </ul>
+                </div>
+            </th>
+        </tr>
+        <tr class="priority">
+            <th class="header">优先级</th>
+            <th class="content">
+                <div class="minute dropdown">
+                    <span class="dropdown-toggle" data-toggle="dropdown">no<span class="caret"></span></span>
+                    <ul class="dropdown-menu">
+                        <li>紧急</li>
+                        <li>略急</li>
+                        <li>一般</li>
+                        <li>不急</li>
+                    </ul>
+                </div>
+            </th>
+        </tr>
+        <tr class="repeat">
+            <th class="header">重复</th>
+            <th class="content">
+                <div class="dropdown">
+
+                    <span class="dropdown-toggle" data-toggle="dropdown">no<span class="caret"></span></span>
+                    <ul class="dropdown-menu">
+                        <li>每日</li>
+                        <li>每周</li>
+                        <li>每月</li>
+                        <li>每年</li>
+                    </ul>
+                </div>
+            </th>
+        </tr>
+        <tr class="end-repeat">
+            <th class="header">结束重复</th>
+            <th class="content">
+                <span>于日期</span>
+                <div class="dropdown">
+                    <span class="dropdown-toggle" data-toggle="dropdown">no<span class="caret"></span></span>
+                    <ul class="dropdown-menu">
+                        <li>Swing</li>
+                        <li>jMeter</li>
+                        <li>EJB</li>
+                    </ul>
+                </div>
+            </th>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
+<script>
+
+    let data = [
+        {startDate: "2018-6-10", name: "事件1"},
+        {startDate: "2018-7-10", name: "事件1"},
+        {startDate: "2018-8-10", name: "事件1"},
+        {startDate: "2018-9-10", name: "事件1"},
+        {startDate: "2018-10-10", name: "事件1"},
+        {startDate: "2018-11-1", name: "事件2"},
+        {startDate: "2018-11-1", name: "事件11"},
+        {startDate: "2018-12-1", name: "事件12"},
+        {startDate: "2018-12-1", name: "事件13"},
+        {startDate: "2018-12-1", name: "事14"},
+        {startDate: "2019-1-10", name: "事件14"},
+        {startDate: "2019-2-10", name: "事件14"},
+        {startDate: "2019-3-10", name: "事件14"},
+        {startDate: "2019-4-10", name: "事件14"},
+        {startDate: "2019-5-10", name: "事件14"},
+        {startDate: "2019-6-10", name: "事件14"},
+        {startDate: "2019-7-10", name: "事件14"},
+        {startDate: "2019-8-10", name: "事件14"},
+        {startDate: "2019-9-10", name: "事件14"},
+        {startDate: "2019-10-10", name: "事件14"},
+        {startDate: "2019-11-10", name: "事件14"},
+        {startDate: "2019-12-10", name: "事件14"},
+        {startDate: "2020-1-10", name: "事件14"},
+        {startDate: "2020-2-10", name: "事件14"},
+    ];
+
+    $("#calendar").calendar({
+        data: data,
+        mode: "month",
+        //  maxEvent: 3,
+        //showModeBtn: false
+        //  newDate: "2018-04-1",
+        cellClick: function (events) {
+            //viewCell的事件列表
+            // console.log(events);
+        },
+        eventsClick: function (e) {
+            // console.log('click', this);
+            let tooltip = document.createElement('div');
+            tooltip.classList.add('cal-tooltip');
+            tooltip.style.display = 'block';
+            tooltip.innerHTML = '<ul><li class="header"><input type="text" value="' + this.textContent +
+                '"></li><li><span tag="date" style="margin-left: 0;">'
+                + $(this).parents('.calendar-cell')[0].title + '</span><span tag="time">' + 'time' + '</span></li><li>'
+                + '优先级:' + '<span tag="priority">' + '紧急' + '</span></li><li>'
+                + '重复: <span tag="repeat">' + '无' + '</span></li><li>'
+                + '</li></ul>';
+            // let htmlobj = $.ajax({
+            //     url: '/query/event',
+            //     async: false
+            // });
+            // tooltip.addEventListener('mouseleave',function () {
+            //     let val = document.querySelector('.cal-tooltip');
+            //     if(val){
+            //         val.parentNode.removeChild(val);
+            //     }
+            // }, false);
+            // tooltip.querySelector('.header').addEventListener('click', function (val) {
+            //    let edit = document.createElement('input');
+            //    console.log(val);
+            //    console.log(this);
+            //    // $(this).append(edit);
+            //     $(this).html('<li class="header"><input>' + this.textContent + '</li>');
+            //     $(this).focus();
+            // });
+            tooltip.addEventListener('dblclick', function (e) {
+                console.log(this, this.type);
+                console.log(tooltip);
+                let name = tooltip.querySelector('.header input').value;
+                let date = tooltip.querySelector('[tag="date"]').textContent;
+                let time = tooltip.querySelector('[tag="time"]').textContent;
+                let time_hour = time.split(':')[0];
+                let time_min = time.split(':')[1];
+                let repeat = tooltip.querySelector('[tag="repeat"]').textContent;
+                let prior = tooltip.querySelector('[tag="priority"]').textContent;
+                console.log(name, date, time, repeat, prior);
+                $(this).html('  <table class="edit">\n' +
+                    '        <tr><th class="name">' + name + '</th></tr>\n' +
+                    '        <tr class="start-time">\n' +
+                    '            <th class="header ">开始时间</th>\n' +
+                    '            <th class="content"><span>' + date + '</span><div class="hour dropdown">\n' +
+                    '                  <span class="dropdown-toggle" data-toggle="dropdown">no<span class="caret"></span></span>\n' +
+                    '                <ul class="dropdown-menu">\n' +
+                    '                    <li>10</li>\n' +
+                    '                    <li>2</li>\n' +
+                    '                    <li>3</li>\n' +
+                    '                </ul>\n' +
+                    '            </div>\n' +
+                    '                <div class="minute dropdown">\n' +
+                    '                  <span class="dropdown-toggle" data-toggle="dropdown">no<span class="caret"></span></span>\n' +
+                    '                <ul class="dropdown-menu">\n' +
+                    '                    <li>10</li>\n' +
+                    '                    <li>2</li>\n' +
+                    '                    <li>3</li>\n' +
+                    '                </ul>\n' +
+                    '            </div>\n' +
+                    '            </th>\n' +
+                    '        </tr>\n' +
+                    '        <tr class="end-time">\n' +
+                    '            <th class="header">结束时间</th>\n' +
+                    '            <th class="content"><span>' + date + '</span><div class="hour dropdown">\n' +
+                    '                <span class="dropdown-toggle" data-toggle="dropdown">no<span class="caret"></span></span>\n' +
+                    '                <ul class="dropdown-menu">\n' +
+                    '                    <li>10</li>\n' +
+                    '                    <li>2</li>\n' +
+                    '                    <li>3</li>\n' +
+                    '                </ul>\n' +
+                    '            </div>\n' +
+                    '                <div class="minute dropdown">\n' +
+                    '                    <span class="dropdown-toggle" data-toggle="dropdown">no<span class="caret"></span></span>\n' +
+                    '                    <ul class="dropdown-menu">\n' +
+                    '                        <li>10</li>\n' +
+                    '                        <li>2</li>\n' +
+                    '                        <li>3</li>\n' +
+                    '                    </ul>\n' +
+                    '                </div></th>\n' +
+                    '        </tr>\n' +
+                    '        <tr class="priority">\n' +
+                    '            <th class="header">优先级</th>\n' +
+                    '            <th class="content">\n' +
+                    '                <div class="minute dropdown">\n' +
+                    '                    <span class="dropdown-toggle" data-toggle="dropdown">no<span class="caret"></span></span>\n' +
+                    '                    <ul class="dropdown-menu">\n' +
+                    '                        <li>紧急</li>\n' +
+                    '                        <li>略急</li>\n' +
+                    '                        <li>一般</li>\n' +
+                    '                        <li>不急</li>\n' +
+                    '                    </ul>\n' +
+                    '                </div>\n' +
+                    '            </th>\n' +
+                    '        </tr>\n' +
+                    '        <tr class="repeat">\n' +
+                    '            <th class="header">重复</th>\n' +
+                    '            <th class="content">\n' +
+                    '                <div class="dropdown">\n' +
+                    '\n' +
+                    '                <span class="dropdown-toggle" data-toggle="dropdown">no<span class="caret"></span></span>\n' +
+                    '                <ul class="dropdown-menu">\n' +
+                    '                    <li>每日</li>\n' +
+                    '                    <li>每周</li>\n' +
+                    '                    <li>每月</li>\n' +
+                    '                    <li>每年</li>\n' +
+                    '                </ul>\n' +
+                    '                </div>\n' +
+                    '            </th>\n' +
+                    '        </tr>\n' +
+                    '        <tr class="end-repeat">\n' +
+                    '            <th class="header">结束重复</th>\n' +
+                    '            <th class="content">\n' +
+                    '                <span>于日期</span>\n' +
+                    '                <div class="dropdown">\n' +
+                    '                    <span class="dropdown-toggle" data-toggle="dropdown">no<span class="caret"></span></span>\n' +
+                    '                <ul class="dropdown-menu">\n' +
+                    '                       <li>Swing</li>\n' +
+                    '                    <li>jMeter</li>\n' +
+                    '                    <li>EJB</li>\n' +
+                    '                </ul>\n' +
+                    '                </div>\n' +
+                    '            </th>\n' +
+                    '        </tr>\n' +
+                    '    </table>');
+                $('.dropdown-toggle').each(function (i, val) {
+                    val.addEventListener('click', function () {
+                        let val = $(this).parents('.dropdown').children('.dropdown-menu');
+                        if (val) {
+                            val.toggleClass('open');
+                        }
+                    }, false);
+                }, false);
+            }, false);
+            let ind = $(this).parent().children('li').index($(this));
+            tooltip.style.top = -75 + ind * 21 + 'px';
+            $(this).parents('.calendar-content').append(tooltip);
+
+        },
+        cellMouseLeave: function () {
+            // console.log('mouseleave', this);
+            let tooltip = document.querySelector('.cal-tooltip');
+            // if(tooltip){
+            //     tooltip.parentNode.removeChild(tooltip);
+            // }
+        }
+    });
+    window.onload = function () {
+        $('.dropdown-toggle').each(function (i, val) {
+            val.addEventListener('click', function () {
+                let val = $(this).parents('.dropdown').children('.dropdown-menu');
+                if (val) {
+                    val.toggleClass('open');
+                }
+            }, false);
+        });
+    };
+</script>

@@ -1,0 +1,144 @@
+/* css for index.html */
+/* made by may */
+
+body{
+    background: url("./img/bg_6.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: bold;
+}
+
+section{
+    margin: 20px;
+    
+}
+section h2{
+    font-size: 28px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px;
+}   
+
+.body-inside{
+    width: 800px;
+    background: white;
+    margin: 10px auto;
+}
+
+.header{
+    width:50%;
+    margin: 20px;
+    width: 650px;
+    background: lightblue;
+    overflow: hidden;
+}
+
+.header div p{
+    display: block;
+    color: #000045;
+}
+
+.header-content{
+    position: relative;
+    width: 400px;
+    top: 0;
+    margin: 12px 6px;
+    float: left;
+    height: inherit;
+}
+
+.header-content h1{
+    font-size: 18px;
+}
+
+.header-content p{
+    font-size: 12px;
+}
+
+.header-image{
+    margin-left: 400px;
+    padding-top: 100%;
+    padding: 2px;
+    overflow: hidden;
+}
+
+.header-image figure{
+    background: #ffffff;
+    border-color: aliceblue;
+}
+
+.header-image figure img{
+    border: 1em;
+    border-color: aliceblue;
+    max-width: 100%;
+    max-height: 100%;
+    margin:auto 4px;
+}
+
+.view-content{
+    width: 800px;
+    margin-top: 20px;
+}
+
+.view-content article{
+    width: 95%;
+    text-align: left;
+    margin: 10px auto;
+    min-height: 110px;
+    max-height: 120px;
+}
+
+.view-content article h3{
+    font-size: 20px;
+    margin-left: 130px;
+    margin-top: 8px;
+}
+
+.node-content{
+    font-family: "Helvetica Neue",Helvetica,Arial;
+    font-size: 15px;
+    line-height: 24px;
+    color: #767676;
+    letter-spacing: .15px;
+    line-height: 22px;
+    margin-left: 130px;
+    margin-top: 8px;
+}
+
+.node-image{
+    float: left;
+    position: absolute;
+    margin-right: 15px;
+    width: 110px;
+    height: 110px;
+    /* max-width: 120px;
+    max-height: 120px; */
+    overflow: hidden;
+}
+
+.node-image a{
+    overflow: hidden;
+}
+
+.node-image a img{
+    width: 100%;
+    height: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+a:visited{
+    text-decoration: underline;
+    color: darkblue;
+}
+

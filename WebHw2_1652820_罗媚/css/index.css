@@ -1,0 +1,498 @@
+/* stylesheet for main html module*/
+
+/* ------- 1. universal  -------- */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+h4 {
+    color: #37a;
+}
+
+/* ------ 2. nav part -------- */
+
+.bg {
+    background: #f0f3f5;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.nav-wrap {
+    border-bottom: 1px solid #e3ebec;
+}
+
+.nav-pri {
+    margin: 0 auto;
+    overflow: visible;
+    position: relative;
+    padding: 10px 0 5px;
+    zoom: 1;
+}
+
+.nav-logo {
+    /* background: url("../img/logo.png") no-repeat 0 -29px; */
+    height: 59px;
+    width: 59px;
+    overflow: hidden;
+    float: left;
+    margin-left: 45px;
+}
+
+.nav-search {
+    margin-left: 145px;
+    overflow: visible !important;
+    position: relative;
+    zoom: 1;
+    padding: 10px 0 15px 0;
+}
+
+.nav-search label {
+    position: absolute;
+    left: 11px;
+    top: 10px;
+    line-height: 30px;
+    cursor: text;
+    color: #bbb;
+    width: auto;
+}
+
+.nav-search fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    position: static;
+}
+
+.nav-search input {
+    -webkit-appearance: none;
+}
+
+.nav-search .inp {
+    float: left;
+    width: 470px;
+    height: 32px;
+    text-align: center;
+    margin-right: -3px;
+    cursor: text;
+    background: lightgray;
+    border: 1px transparent;
+    border-radius: 2px;
+}
+
+.nav-search .inp input {
+    background: #fff;
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    height: 30px;
+    padding-left: 10px;
+    height: 28px \9;
+    line-height: 28px \9;
+    outline: none;
+    border: 1px transparent;
+    border-radius: 2px 0 0 2px;
+}
+
+.nav-search .inp-btn {
+    position: relative;
+    left: -1px;
+    width: 37px;
+    height: 34px;
+    zoom: 1;
+    overflow: hidden;
+}
+
+.nav-search .inp-btn input {
+    background: url("../img/search.png") no-repeat -40px -40px;
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    padding: 35px 0 0 0;
+    overflow: hidden;
+    color: transparent;
+    cursor: pointer;
+    display: inline-block;
+    border: 1px transparent;
+    border-radius: 2px 0 2px 0;
+}
+
+.search-res {
+    color: red;
+}
+
+.nav-sec {
+    overflow: hidden;
+    zoom: 1;
+}
+
+.nav-items {
+    list-style: none;
+    font-size: 14px;
+}
+
+.nav-items li {
+    display: inline;
+    margin-right: 25px;
+}
+
+.nav-items li a {
+    font-size: 14px;
+}
+
+.nav-items li a:link {
+    color: #27a;
+}
+
+.nav-items .selected a {
+    background: #27a;
+    color: #fff !important;
+    border: 1pt transparent;
+    border-radius: 3px;
+    padding: 2px 5px;
+}
+
+/* --------- 3. Billboard part ---------- */
+
+.billboard {
+    padding-right: 15px;
+}
+
+.billboard h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    text-align: center;
+    color: #27a;
+}
+
+.films {
+    width: 100%;
+}
+
+.film {
+    min-height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.film .poster {
+    width: 75px;
+    height: auto;
+    overflow: hidden;
+}
+
+.poster a {
+    width: 100%;
+}
+
+.poster a img {
+    width: 75px;
+    height: auto;
+}
+
+.intro {
+    display: inline-block;
+    /* max-width: 600px; */
+}
+
+.intro a {
+    font: 15px Arial, Helvetica, sans-serif;
+    line-height: 150%;
+    color: lightskyblue;
+    margin-bottom: 6px;
+}
+
+.intro p {
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.intro p .type {
+    border: 1px solid white;
+    border-radius: 2px;
+    margin-left: 10px;
+    padding: 1px;
+    color: #37a;
+    background: white;
+    display: inline-block;
+}
+
+.intro .cast {
+    max-height: 50%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    /*-webkit-line-clamp: 3;*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+
+.intro .cast::after {
+    display: inline;
+    content: "...";
+}
+
+.review {
+    background: url("../img/star.png") no-repeat 0 -80px;
+    padding-left: 20px;
+    margin-top: 50%;
+    display: inline-block;
+    font-weight: bold;
+}
+
+/* ---------- 4. page  --------- */
+
+.page-icon {
+    margin: 20px 0 40px;
+    font-size: 14px;
+    text-align: center;
+    color: #005aa0;
+}
+
+.page-icon span, .page-disabled, .page-prev, .page-next {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 4px 10px 5px;
+    font-size: 14PX;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+.page-icon span:hover {
+    background: #37a;
+    color: whitesmoke;
+}
+
+.page-current {
+    color: #ccc;
+    padding: 4px 10px 5px;
+    font-size: 14px;
+}
+
+.page-disabled {
+    color: #ccc;
+}
+
+#page .page-dot {
+    border: none;
+    content: "...";
+}
+
+/* --------- 5. sidebar : rank-list --------- */
+.aside {
+    margin-bottom: 40px;
+    padding: 0 10px;
+}
+
+.aside h4 {
+    color: #37a;
+    padding-left: 10px;
+}
+
+.aside .type {
+    border: 1px solid white;
+    border-radius: 2px;
+    margin-left: 10px;
+    padding: 1px;
+    color: #37a;
+    background: white;
+    display: inline-block;
+}
+
+.aside .type:hover {
+    text-decoration: underline;
+}
+
+.rank-list {
+    padding: 10px;
+    margin-left: 5px;
+}
+
+.rank-list li {
+    color: hsl(192, 93%, 43%);
+    border-bottom: 1px solid lightgray;
+    padding: 5px;
+}
+
+/* --------- 6. footer --------- */
+
+.footer {
+    background: #f0f3f5;
+    color: #27a;
+}
+
+.footer .container {
+    padding: 0 0 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer .container h4 {
+    margin-left: 10px;
+}
+
+.footer ul {
+    margin: 0 auto;
+    text-align: center;
+    list-style-type: none;
+    padding: 20px 0;
+}
+
+.footer ul li {
+    display: inline-block;
+    text-align: center;
+    background: #ffffff;
+    color: #27a;
+    line-height: 42px;
+    margin: 0 6px;
+    width: 51px !important;
+    height: 51px !important;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.footer ul li:hover {
+    background: #37a;
+}
+
+.footer ul li:hover a {
+    color: #fff;
+}
+
+.footer ul li a {
+    color: #27a;
+    width: 51px !important;
+    height: 51px !important;
+}
+
+.footer ul li a i {
+    line-height: 52px !important;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 21px solid transparent;
+    border-right: 21px solid transparent;
+    border-top: 25px solid white;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.totop {
+    display: block;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background-color: #37a;
+    color: #fff;
+    line-height: 42px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -21px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.totop i {
+    color: #fff;
+}
+
+/* ----------- 7. Universal label ----------- */
+
+a {
+    display: inline-block;
+    font-size: 14px;
+    text-decoration: none;
+    color: hsl(192, 93%, 43%);
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    cursor: pointer;
+}
+
+a:hover {
+    color: hsl(192, 100%, 69%);
+    text-shadow: 0 1px 0 hsl(192, 100%, 28%);
+}
+
+a:focus, a:active {
+    outline: none;
+    color: hsl(192, 84%, 57%);
+    text-shadow: 0 0 5px hsla(0, 0%, 0%, .1);
+    -webkit-transform: translateY(6px);
+    -moz-transform: translateY(6px);
+    -ms-transform: translateY(6px);
+    -o-transform: translateY(6px);
+    transform: translateY(6px);
+}
+
+a:visited {
+    color: hsl(192, 95%, 36%);
+    text-decoration: underline;
+}
+
+/* ------------ 8. Adaptive ----------- */
+@media screen and (max-width: 260px) {
+    .nav-search {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .nav-logo {
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+    }
+
+    .nav-search {
+        margin-left: 40px;
+    }
+
+    .nav-search .inp {
+        width: 80%;
+    }
+
+    .page-end {
+        display: none;
+    }
+
+    .page-icon span {
+        display: none;
+    }
+
+    .page-icon .page-current {
+        display: inline;
+    }
+
+    #prev_page {
+        display: inline;
+    }
+
+    #next_page {
+        display: inline;
+    }
+}
+
+@media screen and (max-width: 650px) and (min-width: 450px) {
+    .page-end {
+        display: none;
+    }
+
+    .nav-search .inp {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 720px) and (min-width: 650px) {
+    .page-end {
+        display: none;
+    }
+
+    .nav-search .inp {
+        width: 400px;
+    }
+}

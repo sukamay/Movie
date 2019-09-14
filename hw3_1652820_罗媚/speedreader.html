@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Speed Reader</title>
+    <!-- This is linking to my stylesheet, speedreader.css -->
+    <link rel="stylesheet" type="text/css" href="speedreader.css" title="style" />
+    <script src="./speedreader.js"></script>
+</head>
+
+<body>
+    <h1>SpeedReader</h1>
+    <div id="show"></div>
+
+    <div class="controls">
+        <div class="control">
+            <label class="label">
+                Play Controls
+            </label>
+            <fieldset>
+                <input type="button" id="start" class="button" name="play" value="Start">
+                <input type="button" id="stop" class="button" name="play" value="Stop">
+            </fieldset>
+        </div>
+        <div class="control">
+            <label class="label">Speed</label>
+            <fieldset>
+                <select id="speed" class="button">
+                    <option value="200" class="button">200 wpm</option>
+                    <option value="300">300 wpm</option>
+                    <option value="350" selected>350 wpm</option>
+                    <option value="400">400 wpm</option>
+                    <option value="450">450 wpm</option>
+                    <option value="500">500 wpm</option>
+                </select>
+
+                <!-- <input list="speedlist" name="browser" id="speed" class="button">
+                <datalist id="speedlist">
+                <option value="200 wpm"></option>
+                <option value="300 wpm"></option>
+                <option value="350 wpm" selected></option>
+                <option value="400 wpm"></option>
+                <option value="450 wpm"></option>
+                <option value="500 wpm"></option>
+                </datalist> -->
+            </fieldset>
+        </div>
+        <div class="control">
+            <label class="label">Size</label>
+            <fieldset>
+                <label><input id="medium" type="radio" name="size" value="medium" 
+                onclick="changeSize(this)">Medium</label>
+                <label><input id="big" type="radio" name="size" value="big" 
+                onclick="changeSize(this)">Big</label>
+                <label><input id="bigger" type="radio" name="size" value="bigger"
+                onclick="changeSize(this)">Bigger</label>
+            </fieldset>
+        </div>
+    </div>
+
+    <fieldset class="inputbox">
+        <legend class="label">Input Text</legend>
+        <textarea id="text" rows="10" cols="80"></textarea>
+    </fieldset>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+{% for poster in posters %}
+    {% ifequal poster.row_flag 'start' %}
+        <div class="row">
+    {% endifequal %}
+<div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 poster-item">
+
+    <a href="/detail/{{ poster.id }}">
+        <div class="poster-tag">
+            <img src={{ poster.poster }} alt="poster"
+                 class="img-responsive">
+        </div>
+    </a>
+
+    <div class="poster-intro">
+        <a href="/detail/{{ poster.id }}">
+                               <span class="poster-name">
+                                {{ poster.title_zh }}
+                            </span>
+        </a>
+
+        <span class="poster-star">
+                                {{ poster.average }}
+                            </span>
+    </div>
+</div>
+{% ifequal poster.row_flag 'end' %}
+    </div>
+{% endifequal %}
+{% endfor %}

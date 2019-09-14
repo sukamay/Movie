@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <link href="img/flogo.png"
+          type="image/png" rel="shortcut icon"/>
+    <meta charset="utf-8">
+    <meta name="referrer" content="no-referrer">
+    <title>济影</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/create.js"></script>
+    <script src="js/page.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/index.js"></script>
+</head>
+
+<body id="main">
+<div class="bg">
+    <div class="container">
+        <div class="nav-pri">
+            <div class="nav-logo"><img src="./img/flogo.png" alt="logo" class="img-responsive"></div>
+            <div class="nav-search">
+                <fieldset>
+                    <div class="inp"><input id="inp-query" name="search_text" size="22" maxlength="60"
+                                            placeholder="搜索电影、影人" value="" autocomplete="off"></div>
+                    <div class="inp-btn"><input id="search" type="submit" value="搜索"></div>
+                </fieldset>
+            </div>
+        </div>
+        <div class="nav-sec">
+            <div class="nav-items">
+                <ul>
+                    <li class="selected"><a href="#films">选电影</a>
+                    </li>
+                    <li><a href="rank.html" target="_blank">排行榜</a>
+                    </li>
+                    <li><a href="#classify">分类</a>
+                    </li>
+                    <li><a href="https://movie.douban.com/review/best/">影评</a>
+                    </li>
+                </ul>
+            </div>
+            <a href="https://movie.douban.com/annual/2018?source=movie_navigation" class="movieannual2018"></a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-8 billboard">
+            <h1>电影清单</h1>
+            <table class="table table-striped table-responsive films">
+                <tbody id="films">
+                <!-- <tr class="film">
+                        <td class="poster">
+                            <a href="index.html">
+                                <img src="https://img3.doubanio.com/lpic/s2555801.jpg" alt="poster"
+                                    class="img-responsive">
+                            </a>
+                        </td>
+                        <td>
+                            <div class="intro">
+                                <a href="index.html">Crazy Alien</a>
+                                <p>
+                                    <span class="year">2019-02-05</span>
+                                    <span class="type">剧情</span>
+                                    <span class="type">动作</span>
+                                </p>
+                                <p class="cast">/ 黄渤 / 沈腾 / 汤姆·派福瑞 / 马修·莫里森 / 徐峥 / 于和伟 / 雷佳音 / 刘桦 / 邓飞 / 蔡明凯 / 王戈 /
+                                    凯特·纳尔逊 / 王砚伟 / 呲路 / 罗恩·斯穆安伯格 / 丹尼尔·休·凯利 / 刘十六 / 大卫·雷登 / 中国大陆 / 宁浩 /...</p>
+                            </div>
+                        </td>
+                        <td><span class="review">9.2</span></td>
+                      </tr> -->
+                </tbody>
+            </table>
+            <div id="page" class="page-icon">
+                <span class="page-end">首页</span>
+                <span id="prev_page" class="page-prev page-disabled">上一页</span>
+                <span class="page-current">1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+                <span id="next_page" class="page-next">下一页</span>
+                <span class="page-end">末页</span>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-3 aside">
+            <h4>排行榜</h4>
+            <ol class="rank-list">
+                <li><a href="detail.html?id=24857754">吉屋出租：百老汇剧场版</a></li>
+                <li><a href="detail.html?id=19955871">车轮不息</a></li>
+                <li><a href="detail.html?id=1401592">马丁·斯科塞斯的美国电影之旅</a></li>
+                <li><a href="detail.html?id=2997817">街头霸王香蕉大电影</a></li>
+                <li><a href="detail.html?id=2346313">猎兔季节</a></li>
+                <li><a href="detail.html?id=26772763">黄阿丽：小眼镜蛇</a></li>
+                <li><a href="detail.html?id=7015732">玛瑞娜·阿布拉莫维奇：艺术家在场</a></li>
+                <li><a href="detail.html?id=1947265">落叶</a></li>
+                <li><a href="detail.html?id=1294438">假面</a></li>
+                <li><a href="detail.html?id=1304626">广播时间</a></li>
+            </ol>
+            <span class="clearfix"></span>
+            <h4 id="classify">分类</h4>
+            <span class="type">歌舞</span>
+            <span class="type">剧情</span>
+            <span class="type">喜剧</span>
+            <span class="type">纪录片</span>
+            <span class="type">音乐</span>
+            <span class="type">动画</span>
+            <span class="type">运动</span>
+            <span class="type">冒险</span>
+            <span class="type">短片</span>
+            <span class="type">家庭</span>
+            <span class="type">科幻</span>
+            <span class="type">传记</span>
+            <span class="type">动作</span>
+            <span class="type">战争</span>
+            <span class="type">爱情</span>
+        </div>
+    </div>
+</div>
+<span class="clearfix"></span>
+<div class="footer" id="footer">
+    <div class="container">
+        <div class="triangle"></div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h4>联系我</h4>
+            <p><i class="icon icon-envelope"></i><a>253246887@qq.com</a></p>
+            <p><i class="icon icon-link"></i><a
+                    href="https://github.com/sukamay/sukamay.github.io">https://github.com/sukamay/sukamay.github.io</a>
+            </p>
+        </div>
+        <ul>
+            <li><a href="https://github.com/sukamay"><i class="icon icon-github icon-2x"></i></a>
+            </li>
+        </ul>
+        <span id="totop" class="totop"><i class="icon icon-chevron-up"></i>
+          </span>
+    </div>
+</div>
+</body>
+
+</html>

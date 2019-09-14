@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <link href="/static/img/flogo.png"
+          type="image/png" rel="shortcut icon"/>
+    <meta charset="utf-8">
+    <meta name="referrer" content="no-referrer">
+    <title>济影</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="stylesheet" href="/static/css/detail.css">
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/static/js/detail.js"></script>
+</head>
+
+<body>
+<div class="top-bar">
+    <div class="top-logo"><img src="/static/img/wlogo.png" alt="logo"></div>
+    <div class="nav-items">
+        <ul>
+            <li><a href="/" target="_blank">选电影</a>
+            </li>
+            <li><a href="/?rank=true" target="_blank">排行榜</a>
+            </li>
+            <li><a href="/classify/" target="_blank">分类</a>
+            </li>
+            <li><a href="https://movie.douban.com/review/best/">影评</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="short-bg">
+    <div class="overlap"></div>
+    <div class="container bg-shadow">
+        <div id="main" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 detail">
+            <div class="row">
+                <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4">
+                    <div class="detail-poster">
+                        <img src={{ poster }} alt="poster">
+
+                        <div class="detail-review">
+                            <div class="avg-review">
+                                <div class="avg-review-left">
+                                    {{ average }}
+                                </div>
+                                <div class="avg-review-right">
+                                    <div id="stars"></div>
+                                    <div class="rating-num">{{ rating_people }}人评价</div>
+                                </div>
+                            </div>
+                            <table class="table star-list">
+                                <tbody>
+                                {% for star in stars %}
+                                <tr>
+                                    <td class="star-level">5星</td>
+                                    <td>
+                                        <span class="power"></span>
+                                        <span class="percent">{{ star }}%</span>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+                    <div class="detail-name-zh">{{ title_zh }}</div>
+                    <div class="detail-name-en">{{ title_en }}</div>
+                    <div class="detail-intro">
+                        <span class="year">{{ year }}</span>
+                        <span class="type">
+                            {% for genre in genres %}
+                             {{ genre }} /
+                            {% endfor %}
+                        </span>
+                    </div>
+                    <table class="table table-condensed detail-list">
+                        <tbody>
+                        <tr>
+                            <td class=" first head">导演:</td>
+                            <td class="first">
+                                {{ directors }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="head">编剧:</td>
+                            <td>
+                            {{ writers }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="head">主演:</td>
+                            <td>
+                                {{ casts }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="head">制片国家/地区:</td>
+                            <td>
+                                {{ countries }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="head">语言:</td>
+                            <td>
+                            {{ languages }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="head">上映日期:</td>
+                            <td>
+                                {{ pubdate }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="head">片长:</td>
+                            <td>{{ duration }} 分钟</td>
+                        </tr>
+                        <tr>
+                            <td class="head">IMDb链接:</td>
+                            <td>{{ imdb }}</td>
+                        </tr>
+                        <tr>
+                            <td class="head">剧情简介:</td>
+                            <td></td>
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                    <p class="content">
+                        {{ summary }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<span class="clearfix"></span>
+<div class="footer" id="footer">
+    <div class="container">
+        <div class="triangle"></div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h4>联系我</h4>
+            <p><i class="icon icon-envelope"></i><a>253246887@qq.com</a></p>
+            <p><i class="icon icon-link"></i><a
+                    href="https://github.com/sukamay/sukamay.github.io">https://github.com/sukamay/sukamay.github.io</a>
+            </p>
+        </div>
+        <ul>
+            <li><a href="https://github.com/sukamay"><i class="icon icon-github icon-2x"></i></a>
+            </li>
+        </ul>
+        <span id="totop" class="totop"><i class="icon icon-chevron-up"></i>
+          </span>
+    </div>
+</div>
+</body>
+
+</html>

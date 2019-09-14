@@ -1,0 +1,635 @@
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/cJZKeOuBrn4kERxqtaUH3fY6323mHUZFJMgTvxaG2iE.eot");
+    src: local('Open Sans'), local('OpenSans'), url("../font/cJZKeOuBrn4kERxqtaUH3fY6323mHUZFJMgTvxaG2iE.eot") format('embedded-opentype'), url("../font/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff") format('woff');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    outline: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+
+/*----------------------------------------------------
+ 2. Document Setup
+------------------------------------------------------*/
+
+.wrapper {
+    width: 100%;
+    margin:0 auto;
+}
+
+.noPadd {
+    padding: 0px !important;
+}
+
+.container .row {
+    margin: 0px;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    line-height: 27px;
+    font-weight: 400;
+    padding-bottom: 38px;
+    margin: 0px;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 48px;
+    line-height: 57px;
+    font-weight: 700;
+    margin: 0px;
+    padding-bottom: 8px;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 36px;
+    line-height: 38px;
+    padding-bottom: 0px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0px;
+    border-bottom: #ef7674 6px solid;
+    padding-bottom: 9px;
+    display: inline-block;
+}
+
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    padding-bottom: 3px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 19px;
+    line-height: 24px;
+    padding-bottom: 6px;
+    font-weight: 600;
+    margin: 0px;
+    color: #5b4c5c;
+}
+
+h5 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 6px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.heading {
+    text-align: center;
+    padding-bottom: 45px;
+}
+
+.container {
+    max-width: 1080px;
+    /*padding:0;*/
+}
+
+
+/*----------------------------------------------------
+ 3. Header Part
+------------------------------------------------------*/
+
+header {
+    position: relative;
+}
+
+.banner {
+    overflow: hidden;
+    margin: 0 auto !important;
+    background: #CACACA;
+    display: block;
+    width: 100%;
+    position: relative;
+}
+
+.bannerText {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 35%;
+    text-align: center;
+    padding: 30px 0 30px;
+    max-width: 960px;
+    z-index: 2;
+    animation-name: textBox;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+    /* Safari and Chrome: */
+    -webkit-animation-name: textBox;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+}
+
+.bannerText p {
+    font-size: 18px;
+    color: #fff;
+    padding-bottom: 42px;
+}
+
+.home {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    line-height: 40px;
+    color: #fff;
+    font-size: 14px;
+    background-color: #EF7674;
+    text-transform: uppercase;
+    padding: 0 29px;
+    margin: 0 10px;
+    text-decoration: none;
+    outline: none;
+}
+
+.home:focus,
+.home:hover,
+.home:active {
+    color: #eaeaea;
+    text-decoration: none;
+    outline: none;
+}
+
+
+/*----------------------------------------------------
+ 4. Menu Style
+------------------------------------------------------*/
+
+.menu {
+    margin: 40px auto;
+    position: static;
+    left: 0px;
+    right: 0px;
+}
+.navbar-nav > li {
+    float: none;
+    display: inline;
+}
+
+.navbar-nav {
+    margin: 0 auto;
+    text-align: center;
+    float: none;
+}
+
+.nav .menuItem{
+    margin: 10px 20px;
+}
+.nav .menuItem a {
+    font-size: 19px;
+    display: inline;
+    color: #5b4c5c;
+}
+
+.nav .menuItem a:focus,
+.nav .menuItem a:hover,
+.nav .menuItem a:active{
+    color: #EF7674;
+}
+
+/* Declare heights because of positioning of img element */
+
+section{
+    margin: 0 auto;
+}
+
+/*----------------------------------------------------
+ 5. About me Style
+------------------------------------------------------*/
+
+.aboutme {
+    background: #f3f2f3;
+    color: #897f8a;
+    position: relative;
+}
+
+.aboutme .container {
+    padding-top: 140px;
+    padding-bottom: 90px;
+}
+
+.aboutCont {
+    padding-bottom: 78px;
+    padding-left: 48px;
+}
+
+#description {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    padding-right: 50px;
+    margin-bottom: 60px;
+    text-align: justify;
+}
+
+#description p {
+    padding-bottom: 10px;
+}
+
+.aboutme .heading {
+    text-align: center;
+    padding-top: 78px;
+    padding-bottom: 26px;
+}
+
+.aboutme .heading h2 {
+    color: #5b4c5c;
+    display: inline-block;
+}
+
+
+/*----------------------------------------------------
+ 6. technique Skills Style
+------------------------------------------------------*/
+/* 
+.technique{
+    background:#eeeeee;
+    color:#474d5d;
+} 
+*/
+
+.technique .container {
+    padding-top: 140px;
+    padding-bottom: 90px;
+}
+
+.technique .heading p {
+    padding-bottom: 41px;
+    max-width: 660px;
+    text-align: justify;
+    display: block;
+    margin: 0 auto;
+}
+
+.technique p {
+    color: #897f8a;
+}
+
+.technique h2 {
+    color: #5b4c5c;
+    margin-bottom: 49px;
+}
+
+.technique .skillsArea {
+    padding: 0px;
+}
+
+.technique .skills {
+    margin: 0 auto;
+    margin-bottom: 23px;
+    text-align: center;
+    padding: 0px;
+    float: none;
+}
+
+.technique .skills h4 {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 27px;
+    padding-bottom: 11px;
+    color: #5b4c5c;
+}
+
+.chart {
+    position: relative;
+    display: inline-block;
+    width: 118px;
+    height: 118px;
+    margin-bottom: 19px;
+    text-align: center;
+}
+
+.chart canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.percent {
+    display: inline-block;
+    font-size: 21px;
+    color: #5b4c5c;
+    line-height: 118px;
+    z-index: 2;
+    font-weight: bold;
+}
+
+.percent:after {
+    content: '%';
+    margin-left: 0.1em;
+    font-size: .8em;
+}
+
+
+
+/*----------------------------------------------------
+ 7. project Style
+------------------------------------------------------*/
+
+#project {
+    background: #f3f2f3;
+}
+
+.project .container {
+    padding-top: 140px;
+    padding-bottom: 90px;
+}
+
+.project h2 {
+    color: #5b4c5c;
+    margin-bottom: 49px;
+}
+
+.project .heading p {
+    padding-bottom: 41px;
+    max-width: 660px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.project p {
+    color: #897f8a
+}
+
+.proBox {
+    margin-bottom: 18px;
+}
+
+.proBoxcon {
+    background: #FFF;
+    padding: 50px 34px 41px;
+    border-bottom: #e6e6e6 5px solid;
+}
+
+.proBoxcon p {
+    color: #897f8a;
+    font-size: 15px;
+    line-height: 27px;
+    padding-bottom: 38px;
+}
+
+.proBoxcon h3 {
+    text-align: right;
+    color: #4c404d;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.proBoxcon h3 a {
+    text-decoration: underline;
+    color: #ef7674;
+}
+
+.proBox {
+    padding: 0 10px;
+}
+
+
+/*----------------------------------------------------
+ 8. Get in touch Style
+------------------------------------------------------*/
+
+.contact {
+    background: #f8f7f8;
+}
+
+.contact .container {
+    padding-top: 140px;
+    padding-bottom: 90px;
+}
+
+.contact h2 {
+    color: #5b4c5c;
+    margin-bottom: 45px;
+}
+
+.topCon {
+    padding-bottom: 0px !important;
+}
+
+.contactDetails {
+    background: #f8f7f8;
+}
+
+.contactDetails .container {
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+.contactDetails h4 {
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+
+.contactDetails p {
+    color: #897f8a;
+    font-size: 15px;
+    line-height: 19px;
+    padding-bottom: 14px;
+}
+
+.contactDetails p a {
+    color: #897f8a;
+}
+
+.contactDetails p a:hover {
+    color: #5b4c5c;
+    text-decoration: none;
+}
+
+.contactDetails i {
+    padding-right: 15px;
+}
+
+
+/*----------------------------------------------------
+ 9. Footer Style
+------------------------------------------------------*/
+
+.footer {
+    background: #3b323c;
+}
+
+.footer .container {
+    padding: 115px 0 125px;
+    position: relative;
+}
+
+.footer ul {
+    margin: 0 auto;
+    text-align: center;
+    list-style-type: none;
+}
+
+.footer ul li {
+    display: inline-block;
+    text-align: center;
+    background: #ffffff;
+    color: #3b323c;
+    line-height: 42px;
+    margin: 0 6px;
+    width: 51px !important;
+    height: 51px !important;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.footer ul li:hover {
+    background: #282429;
+}
+
+.footer ul li:hover a {
+    color: #fff;
+}
+
+.footer ul li a {
+    color: #3b323c;
+    width: 51px !important;
+    height: 51px !important;
+}
+
+.footer ul li a i {
+    line-height: 52px !important;
+}
+
+.totop {
+    display: block;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background-color: #302931;
+    color: #817a82;
+    line-height: 42px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -21px;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+/*---------------------------------------------------------------------------------
+ 10. Responsive style
+-------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 999px) {
+    .nav .menuItem a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .bannerText {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .bannerText h1 {
+        font-size: 65px;
+        line-height: 71px;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    body {
+        min-height: 700px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .aboutme {
+        padding: 15px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .aboutme {
+        padding:15px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #wrapper {
+        top: 200px !important;
+    }
+    .bannerText {
+        top: 25%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .bannerText h1 {
+        font-size: 42px;
+        line-height: 48px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .bannerText {
+        top: 10%;
+    }
+    .bannerText h1 {
+        font-size: 34px;
+        line-height: 38px;
+    }
+    .bannerText p {
+        font-size: 16px;
+        padding-bottom: 32px;
+    }
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Microsoft YaHei', sans-serif;
+}
+
+a:hover {
+    text-decoration: underline;
+}

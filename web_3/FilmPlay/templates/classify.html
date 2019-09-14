@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <link href="/static/img/flogo.png"
+          type="image/png" rel="shortcut icon"/>
+    <meta charset="utf-8">
+    <meta name="referrer" content="no-referrer">
+    <title>济影</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="stylesheet" href="/static/css/classify.css">
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/static/js/search.js"></script>
+    <script src="/static/js/classify.js"></script>
+</head>
+
+<body id="main">
+<div class="bg">
+    <div class="container">
+        <div class="nav-pri">
+            <div class="nav-logo"><img src="/static/img/flogo.png" alt="logo" class="img-responsive"></div>
+            <div class="nav-search">
+                <form method="get" action="/classify/search/">
+                    <fieldset>
+                        {% csrf_token %}
+                        <div class="inp"><input id="inp-query" name="search_text" type="search" size="22" maxlength="60"
+                                                placeholder="搜索电影、影人" value="" autocomplete="off" required></div>
+                        <div class="inp-btn"><input id="search" type="submit" value="搜索"></div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="nav-sec">
+            <div class="nav-items">
+                <ul>
+                    <li><a href="/">选电影</a>
+                    </li>
+                    <li><a href="/?rank=true" target="_blank">排行榜</a>
+                    </li>
+                    <li><a href="/classify/" class="selected">分类</a>
+                    </li>
+                    <li><a href="https://movie.douban.com/review/best/">影评</a>
+                    </li>
+                </ul>
+            </div>
+            <a href="https://movie.douban.com/annual/2018?source=movie_navigation" class="movieannual2018"></a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-10 col-lg-9 billboard">
+            <h1>分类</h1>
+            <div class="tags">
+                <ul id="genre" class="list-unstyled list-inline">
+                    <li><a class="tag-head">全部形式</a></li>
+                    {% for genre in genre_list %}
+                        <li><a class="tag">{{ genre }}</a></li>
+                    {% endfor %}
+                </ul>
+                <ul id="type" class="list-unstyled list-inline">
+                    <li><a class="tag-head">全部类型</a></li>
+                    {% for type in type_list %}
+                        <li><a class="tag">{{ type }}</a></li>
+                    {% endfor %}
+                </ul>
+                <ul id="country" class="list-unstyled list-inline">
+                    <li><a class="tag-head">全部地区</a></li>
+                    {% for area in area_list %}
+                        <li><a class="tag">{{ area }}</a></li>
+                    {% endfor %}
+                </ul>
+                <ul id="date" class="list-unstyled list-inline">
+                    <li><a class="tag-head">全部年代</a></li>
+                    {% for time in time_list %}
+                        <li><a class="tag">{{ time }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <span class="clearfix"></span>
+            <hr>
+            <div id="poster-list" class="poster-list">
+                    {% for poster in posters %}
+                        {% ifequal poster.row_flag 'start' %}
+                        <div class="row">
+                        {% endifequal %}
+                        <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 poster-item">
+
+                            <a href="/detail/{{ poster.id }}">
+                                <div class="poster-tag">
+                                    <img src={{ poster.poster }} alt="poster"
+                                         class="img-responsive">
+                                </div>
+                            </a>
+
+                            <div class="poster-intro">
+                                <a href="/detail/{{ poster.id }}">
+                               <span class="poster-name">
+                                {{ poster.title_zh }}
+                            </span>
+                                </a>
+
+                                <span class="poster-star">
+                                {{ poster.average }}
+                            </span>
+                            </div>
+                        </div>
+                        {% ifequal poster.row_flag 'end' %}
+                            </div>
+                        {% endifequal %}
+                    {% endfor %}
+                </div>
+
+            <span class="clearfix"></span>
+            <div class="load-more" id="load-more">
+                加载更多
+            </div>
+        <span id="page_num">{{ page_num }}</span>
+
+        </div>
+        <div class="col-xs-12 col-md-3 aside">
+        </div>
+    </div>
+</div>
+<span class="clearfix"></span>
+<div class="footer" id="footer">
+    <div class="container">
+        <div class="triangle"></div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h4>联系我</h4>
+            <p><i class="icon icon-envelope"></i><a>253246887@qq.com</a></p>
+            <p><i class="icon icon-link"></i><a
+                    href="https://github.com/sukamay/sukamay.github.io">https://github.com/sukamay/sukamay.github.io</a>
+            </p>
+        </div>
+        <ul>
+            <li><a href="https://github.com/sukamay"><i class="icon icon-github icon-2x"></i></a>
+            </li>
+        </ul>
+        <span id="totop" class="totop"><i class="icon icon-chevron-up"></i>
+          </span>
+    </div>
+</div>
+</body>
+
+</html>

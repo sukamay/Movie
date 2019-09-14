@@ -1,0 +1,111 @@
+body{
+    background: ghostwhite;
+}
+
+.content{
+    margin: 0 12px;
+    width: 100%;
+}
+
+.article{
+    padding-right: 25px;
+}
+
+.poster{
+    width: 100px;
+    height: 180px;
+    display: table-cell;
+    overflow: hidden;
+}
+
+.poster img{
+    width: 100%;
+    height: auto;
+}
+
+.movie{
+    width: 100%;
+}
+
+.movie .right{
+    display: table-cell;
+}
+
+.movie-name{
+    font-size: 25pt;
+}
+
+.movie-directors {
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.movie-review{
+    overflow: hidden;
+    height: 25px;
+}
+
+.side{}
+
+.poster-col{
+    overflow: hidden;
+    padding: 10px;
+}
+
+.poster-col a img{
+    width: 75px;
+    height: auto;
+}
+
+.title-col{
+    padding-right: 10px;
+    overflow: hidden;
+}
+
+.intro{
+    font-family: "Comic Sans MS", monospace;
+    list-style: none;
+}
+
+.intro .intro-name{
+    font-size: 18pt;
+}
+
+.intro .intro-year{
+    font-size: 12pt;
+}
+
+.intro .intro-cast{
+    font-size: 10pt;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.intro-cast:after{
+    display: inline;
+    content: '...';
+    font-size: 10pt;
+}
+
+.rate-col{
+    text-align: left;
+}
+
+.rate-col strong{
+    background: url("/img/star.png") no-repeat 0 -80px;
+    padding-left: 20px;
+}
+
+a{
+    color: lightskyblue;
+}
+
+a:visited{
+    color: #70579D;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #136cb2;
+    text-decoration: underline;
+}

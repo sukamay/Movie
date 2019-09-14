@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <link href="img/flogo.png"
+          type="image/png" rel="shortcut icon"/>
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <link rel="stylesheet" href="css/cal-heatmap.css" type="text/css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/echarts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+    <script src="js/cal-heatmap.min.js"></script>
+    <script src="js/china.js"></script>
+    <!--<script src="js/charts.js"></script>-->
+    <script src="js/testDataDriven.js"></script>
+</head>
+<body>
+<nav>
+    <div class="container">
+        <div class="logo"><img  class="img-responsive" src="img/flogo.png" alt="logo"> </div>
+        <div class="nav-sec">
+            <ul class="nav-bar">
+                <li><a href="index.html" class="selected">Day</a> </li>
+                <li><a href="#">Week</a> </li>
+                <li><a href="calendarMonth.html">Month</a> </li>
+                <li><a href="calendar.html">Year</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+<div class="container">
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+        <div class="todo-app">
+
+            <header class="header">
+                <h1>todos</h1>
+                <!-- Add New Item -->
+                <input id="add-todo" class="new-todo" type="text" placeholder="What needs to be done?" autofocus>
+            </header>
+
+            <section class="main">
+                <input class="toggle-all" type="checkbox">
+                <!-- Show List -->
+                <ul class="todo-list"></ul>
+                <footer class="footer">
+                    <span class="todo-count"></span>
+                    <ul class="filters">
+                        <li><a class="selected" style="cursor:pointer;">All</a></li>
+                        <li><a class="" style="cursor:pointer;">Active</a></li>
+                        <li><a class="" style="cursor:pointer;">Completed</a></li>
+                    </ul>
+                    <button class="clear-completed">Clear completed</button>
+                </footer>
+            </section>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+        <div class="todo-app">
+            <header class="header">
+                <h3 class="date">date/time</h3>
+            </header>
+            <section class="main">
+                <ul class="date-list">
+                    <li><span class="time-text time-head">AM</span></li>
+                    <li class="time"><label><span class="time-text">7</span>
+                        <input type="text" class="" placeholder="todo">
+                    </label></li>
+                    <li class="time"><label><span class="time-text">8</span>
+                        <input type="text" class="" placeholder="todo">
+                    </label></li>
+                    <li class="time"><label><span class="time-text">9</span>
+                        <input type="text" class="" placeholder="todo">
+                    </label></li>
+                    <li class="time"><label><span class="time-text">10</span>
+                        <input type="text" class="" placeholder="todo">
+                    </label></li>
+                    <li class="time"><label><span class="time-text">11</span>
+                        <input type="text" class="" placeholder="todo">
+                    </label></li>
+                    <li class="time"><label><span class="time-text">12</span>
+                        <input type="text" class="" placeholder="todo">
+                    </label></li>
+                    <li><span class="time-text time-head">PM</span></li>
+                    <li class="time"><label><span class="time-text">1</span>
+                        <input type="text" class="" placeholder="todo">
+                    </label></li>
+                    <li class="time"><label><span class="time-text">2</span>
+                        <input type="text" class="" placeholder="todo">
+                    </label></li>
+                    <li class="time"><label><span class="time-text">3</span>
+                        <input type="text" class="" placeholder="todo">
+                    </label></li>
+                    <li class="time"><label><span class="time-text">4</span>
+                        <input type="text" class="" placeholder="todo">
+                    </label></li>
+                    <li class="time"><label><span class="time-text">5</span>
+                        <input type="text" class="" placeholder="todo">
+                    </label></li>
+                    <li class="time"><label><span class="time-text">6</span>
+                        <input type="text" class="" placeholder="todo">
+                    </label></li>
+                    <li class="time"><label><span class="time-text">7</span>
+                        <input type="text" class="" placeholder="todo">
+                    </label></li>
+                    <li class="time"><label><span class="time-text">8</span>
+                        <input type="text" class="" placeholder="todo">
+                    </label></li>
+                    <li class="time"><label><span class="time-text">9</span>
+                        <input type="text" class="" placeholder="todo">
+                    </label></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 done-panel">
+        <div class="todo-app">
+            <header class="header">
+                <h3 class="done-list">did</h3>
+            </header>
+            <section class="main">
+
+                <div class="panel-body col-centered heatmap-panel">
+                    <span> 过去一年间，你完成了 233 件事情！</span>
+                    <div id="cal-heatmap"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 done-panel">
+        <div class="todo-app">
+            <div id="box">
+            </div>
+        </div>
+
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 done-panel">
+        <div class="todo-app">
+            <div id="map">
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

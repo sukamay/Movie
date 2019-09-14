@@ -1,0 +1,66 @@
+/* css of aboutme page */
+
+body{
+    background-image: url('/Users/luomei/Downloads/bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    width: 800px;
+    margin: 0 auto;
+    /* background: black; */
+    /* color: #8076a3; */
+    color: #57b3cc;
+}
+
+h1,h2{
+    /* background-color: cadetblue; */
+    color: #ad6598;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+}
+
+p::first-letter{
+    font-weight: bolder;
+    font-size: 150%;
+}
+img{
+    width: 100px;
+}
+
+a:link{
+    text-decoration: none;
+}
+a:visited{
+    text-decoration: underline;
+}
+a:hover{
+    text-decoration: underline;
+}
+a::first-letter{
+    text-transform:uppercase;
+    font-weight: bolder; 
+}
+/* 
+dl{
+    color:black;
+} */
+
+dt{
+    list-style-type: decimal;
+    font-size: 80%;
+    color: #68b88e;
+}
+
+dd{
+    text-indent: 10px;
+}
+
+dt dt{
+    list-style-type: none;
+}

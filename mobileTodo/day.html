@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1,user-scalable=no,maximum-scale=1" name="viewport"/>
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="./css/day.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="./js/day.js"></script>
+</head>
+<body>
+<div class="todo-app">
+    <h1>todos</h1>
+    <div class="todo-header">
+        <input class="add-todo" id="add-todo" type="text" placeholder="what needs to be done?">
+    </div>
+    <div class="todo-content">
+        <input type="checkbox" class="toggle-all">
+        <ul class="todo-list">
+            <li>
+                <input type="checkbox">
+                <input type="text" value="web" readonly>
+                <button class="destroy"></button>
+            </li>
+            <li class="completed">
+                <input type="checkbox" checked>
+                <input type="text" value="web" readonly>
+                <button class="destroy"></button>
+            </li>
+        </ul>
+    </div>
+    <div class="footer">
+        <div class="row">
+        <div class="todo-sum">1 items left</div>
+        <div class="todo-filter">
+            <ul>
+                <li class="filter-selected">All</li>
+                <li>Todo</li>
+                <li>Did</li>
+            </ul>
+        </div>
+        </div>
+        <div class="row">
+        <div id="clear-all">clear all</div>
+        <div id="clear-completed">clear completed</div>
+        </div>
+    </div>
+</div>
+<div class="todo-app">
+    <div class="map-header"></div>
+    <div id="cal-heatmap"></div>
+</div>
+
+</body>
+</html>
